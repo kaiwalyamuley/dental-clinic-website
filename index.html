@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panchavati Dental Care | Dentist in Nashik</title>
+<meta name="description" content="Gentle family dentistry in Nashik. Check-ups, fillings, root canals, braces and whitening. Book an appointment on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #EAF3F8;
+    --white: #FFFFFF;
+    --teal: #0B4F5C;
+    --teal-deep: #073841;
+    --coral: #F25C3B;
+    --coral-dark: #D94A2A;
+    --ink: #17252A;
+    --muted: #4F6169;
+    --line: #CFE0E8;
+    --green: #1C8A4C;
+    --display: "Young Serif", Georgia, serif;
+    --body: "Lexend", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); font-size: 17px; line-height: 1.65; color: var(--ink); background: var(--white); font-weight: 300; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+  .wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 400; color: var(--teal); line-height: 1.15; }
+
+  /* Header */
+  header { background: var(--white); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 14px; flex-wrap: wrap; }
+  .logo { font-family: var(--display); font-size: 1.3rem; color: var(--teal); text-decoration: none; }
+  header nav { display: flex; gap: 24px; font-weight: 400; font-size: .95rem; }
+  header nav a { text-decoration: none; color: var(--muted); }
+  header nav a:hover { color: var(--teal); }
+  .call { font-weight: 500; text-decoration: none; background: var(--teal); color: #fff; padding: 9px 18px; border-radius: 999px; font-size: .95rem; }
+  .call:hover { background: var(--teal-deep); }
+
+  /* Hero */
+  .hero { background: var(--sky); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; padding-block: 64px 72px; }
+  .status { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px 6px 12px; font-size: .92rem; font-weight: 400; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--muted); flex: none; }
+  .status.open .dot { background: var(--green); box-shadow: 0 0 0 0 rgba(28,138,76,.5); animation: pulse 2s infinite; }
+  @keyframes pulse { 70% { box-shadow: 0 0 0 9px rgba(28,138,76,0); } 100% { box-shadow: 0 0 0 0 rgba(28,138,76,0); } }
+  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-top: 22px; max-width: 15ch; }
+  .hero p.sub { margin-top: 18px; max-width: 48ch; color: var(--muted); font-size: 1.05rem; }
+  .points { list-style: none; margin-top: 26px; display: grid; gap: 10px; }
+  .points li { padding-left: 30px; position: relative; font-weight: 400; }
+  .points li::before { content: ""; position: absolute; left: 0; top: .5em; width: 16px; height: 9px; border-left: 3px solid var(--coral); border-bottom: 3px solid var(--coral); transform: rotate(-45deg) translateY(-4px); }
+
+  /* Booking card */
+  .book { background: #fff; border-radius: 14px; padding: 30px; box-shadow: 0 12px 40px rgba(11,79,92,.14); border: 1px solid var(--line); }
+  .book h2 { font-size: 1.55rem; }
+  .book .hint { font-size: .92rem; color: var(--muted); margin-top: 4px; }
+  label { display: block; font-weight: 500; font-size: .92rem; margin-top: 16px; }
+  input, select, textarea { width: 100%; margin-top: 6px; padding: 12px 13px; font: 300 1rem var(--body); color: var(--ink); background: #fff; border: 1.5px solid var(--line); border-radius: 8px; }
+  input:focus, select:focus, textarea:focus { border-color: var(--teal); outline: 3px solid rgba(242,92,59,.35); outline-offset: 0; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .btn { display: block; width: 100%; margin-top: 22px; padding: 15px 22px; font: 500 1rem var(--body); border: 0; border-radius: 8px; background: var(--coral); color: #fff; cursor: pointer; text-align: center; text-decoration: none; }
+  .btn:hover { background: var(--coral-dark); }
+  .error { color: #B3261E; font-size: .9rem; margin-top: 10px; min-height: 1.2em; }
+  .note { font-size: .85rem; color: var(--muted); margin-top: 10px; }
+
+  section { padding-block: 76px; }
+  h2.title { font-size: clamp(1.8rem, 3.6vw, 2.5rem); }
+  .lede { margin-top: 12px; max-width: 54ch; color: var(--muted); }
+
+  /* Treatments */
+  .grid { margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+  .grid article { padding: 28px 26px 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .grid h3 { font-size: 1.3rem; }
+  .grid p { margin-top: 8px; color: var(--muted); font-size: .98rem; }
+
+  /* Doctor */
+  .doctor { background: var(--teal-deep); color: #fff; }
+  .doctor .wrap { display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: center; }
+  .monogram { aspect-ratio: 1; border-radius: 50%; background: var(--teal); border: 6px solid rgba(255,255,255,.12); display: grid; place-items: center; font-family: var(--display); font-size: 5.5rem; color: #fff; }
+  .doctor h2 { color: #fff; }
+  .doctor p { margin-top: 14px; color: #CBE0E6; max-width: 56ch; }
+  .doctor .creds { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .doctor .creds span { border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 5px 16px; font-size: .9rem; font-weight: 400; }
+
+  /* Timings */
+  .timings { background: var(--sky); }
+  .timings .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 24px; background: #fff; border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--line); font-weight: 400; }
+  th { font-weight: 500; color: var(--teal); width: 40%; }
+  tr:last-child th, tr:last-child td { border-bottom: 0; }
+  tr.today th, tr.today td { background: #FFF1EC; }
+  .address { margin-top: 24px; }
+  .address p { margin-top: 6px; color: var(--muted); }
+  .address .btn { display: inline-block; width: auto; margin-top: 18px; padding: 13px 24px; background: var(--teal); }
+  .address .btn:hover { background: var(--teal-deep); }
+
+  /* FAQ */
+  .faq { max-width: 760px; }
+  details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  summary { cursor: pointer; font-weight: 500; font-size: 1.05rem; color: var(--teal); list-style: none; display: flex; justify-content: space-between; gap: 20px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--coral); flex: none; }
+  details[open] summary::after { content: "\2212"; }
+  details p { margin-top: 10px; color: var(--muted); }
+
+  footer { background: var(--teal-deep); color: #A9C4CC; padding-block: 28px; font-size: .9rem; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 860px) {
+    .hero .wrap, .timings .wrap, .doctor .wrap { grid-template-columns: 1fr; gap: 36px; }
+    .hero .wrap { padding-block: 40px 52px; }
+    .grid { grid-template-columns: 1fr; }
+    .doctor .monogram { width: 150px; font-size: 3.4rem; }
+    section { padding-block: 54px; }
+    header nav { display: none; }
+    .row { grid-template-columns: 1fr; gap: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .status.open .dot { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Panchavati Dental Care</a>
+    <nav aria-label="Main">
+      <a href="#treatments">Treatments</a>
+      <a href="#doctor">Meet the doctor</a>
+      <a href="#visit">Timings</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <a class="call" href="tel:+919999999999">Call +91 99999 99999</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="status" id="status" aria-live="polite"><span class="dot"></span><span id="status-text">Checking clinic hours</span></div>
+        <h1>Dental care that doesn't hurt or rush you.</h1>
+        <p class="sub">A friendly neighbourhood clinic for children, adults and grandparents. We explain every step before we start and show you the cost first.</p>
+        <ul class="points">
+          <li>Painless treatment with modern anaesthesia</li>
+          <li>Clear price quote before any procedure</li>
+          <li>Sterilised instruments for every patient</li>
+        </ul>
+      </div>
+
+      <form class="book" id="booking" novalidate>
+        <h2>Book an appointment</h2>
+        <p class="hint">Fill this in and we'll confirm your slot on WhatsApp.</p>
+
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+
+        <label for="reason">Reason for visit</label>
+        <select id="reason" name="reason">
+          <option>Check-up and cleaning</option>
+          <option>Tooth pain</option>
+          <option>Filling or root canal</option>
+          <option>Braces or aligners</option>
+          <option>Teeth whitening</option>
+          <option>Child's check-up</option>
+          <option>Something else</option>
+        </select>
+
+        <div class="row">
+          <div>
+            <label for="date">Preferred date</label>
+            <input id="date" name="date" type="date">
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <select id="time" name="time">
+              <option>Morning</option>
+              <option>Evening</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="error" id="error" role="alert"></p>
+        <button class="btn" type="submit">Request on WhatsApp</button>
+        <p class="note">In a dental emergency, call us directly instead.</p>
+      </form>
+    </div>
+  </div>
+
+  <section id="treatments">
+    <div class="wrap">
+      <h2 class="title">What we treat</h2>
+      <p class="lede">From a routine clean to a full smile makeover. Your first consultation includes a simple written plan.</p>
+      <div class="grid">
+        <article>
+          <h3>Check-up and cleaning</h3>
+          <p>A full exam and scaling to remove tartar, with advice on brushing that fits your teeth.</p>
+        </article>
+        <article>
+          <h3>Fillings</h3>
+          <p>Tooth-coloured fillings that blend in and are shaped to feel natural when you bite.</p>
+        </article>
+        <article>
+          <h3>Root canal treatment</h3>
+          <p>Saves a badly decayed tooth, done under anaesthesia so you can stay comfortable throughout.</p>
+        </article>
+        <article>
+          <h3>Braces and aligners</h3>
+          <p>Straightening for teenagers and adults, with a clear timeline and monthly cost explained upfront.</p>
+        </article>
+        <article>
+          <h3>Teeth whitening</h3>
+          <p>Safe in-clinic whitening that lifts tea and coffee stains without damaging enamel.</p>
+        </article>
+        <article>
+          <h3>Children's dentistry</h3>
+          <p>Gentle first visits, cavity prevention and sealants, in a calm and patient setting.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="doctor" class="doctor">
+    <div class="wrap">
+      <div class="monogram" aria-hidden="true">AD</div>
+      <div>
+        <h2>Dr. Anita Deshmukh</h2>
+        <p>Dr. Deshmukh has treated families in Nashik for over a decade. She believes most fear of the dentist comes from not knowing what happens next, so she talks you through every step and stops whenever you ask.</p>
+        <div class="creds">
+          <span>BDS</span>
+          <span>MDS, Endodontics</span>
+          <span>Speaks Marathi, Hindi, English</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="timings">
+    <div class="wrap">
+      <div>
+        <h2 class="title">Clinic timings</h2>
+        <table id="hours">
+          <tr data-day="1"><th>Monday</th><td>10:00 am to 1:30 pm, 5:00 to 8:30 pm</td></tr>
+          <tr data-day="2"><th>Tuesday</th><td>10:00 am to 1:30 pm, 5:00 to 8:30 pm</td></tr>
+          <tr data-day="3"><th>Wednesday</th><td>10:00 am to 1:30 pm, 5:00 to 8:30 pm</td></tr>
+          <tr data-day="4"><th>Thursday</th><td>10:00 am to 1:30 pm, 5:00 to 8:30 pm</td></tr>
+          <tr data-day="5"><th>Friday</th><td>10:00 am to 1:30 pm, 5:00 to 8:30 pm</td></tr>
+          <tr data-day="6"><th>Saturday</th><td>10:00 am to 1:30 pm, 5:00 to 8:30 pm</td></tr>
+          <tr data-day="0"><th>Sunday</th><td>Closed</td></tr>
+        </table>
+      </div>
+      <div class="address">
+        <h2 class="title">Find the clinic</h2>
+        <p>2nd floor, Shreeram Complex, near Ramkund, Panchavati, Nashik 422003</p>
+        <p>Parking is available in the building basement.</p>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Panchavati+Nashik" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2 class="title">Questions patients ask</h2>
+      <div class="faq">
+        <details>
+          <summary>Will the treatment hurt?</summary>
+          <p>We numb the area before any procedure that could be uncomfortable, and we pause whenever you raise your hand. Most patients are surprised how easy it feels.</p>
+        </details>
+        <details>
+          <summary>How much will it cost?</summary>
+          <p>You get a written quote after your first consultation, before any treatment starts. If the plan changes, we tell you first.</p>
+        </details>
+        <details>
+          <summary>Do I need an appointment?</summary>
+          <p>Appointments are best, because they keep waiting times short. For severe pain, call us and we'll fit you in as soon as we can.</p>
+        </details>
+        <details>
+          <summary>At what age should my child first visit?</summary>
+          <p>Around the first birthday, or when the first tooth appears. Early visits prevent most childhood cavities.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Panchavati Dental Care is a sample design. Clinic name, doctor and contact details are placeholders.</span>
+    <span>Website by Your Name</span>
+  </div>
+</footer>
+
+<script>
+  // Replace with the real number (country code + number, no plus or spaces)
+  var WHATSAPP_NUMBER = "919999999999";
+
+  // Opening hours in minutes after midnight, Monday to Saturday (Sunday closed)
+  var SESSIONS = [[10 * 60, 13 * 60 + 30], [17 * 60, 20 * 60 + 30]];
+
+  function fmt(mins) {
+    var h = Math.floor(mins / 60), m = mins % 60;
+    var ap = h >= 12 ? "pm" : "am";
+    h = h % 12 || 12;
+    return h + (m ? ":" + String(m).padStart(2, "0") : "") + " " + ap;
+  }
+
+  // Current time in India, whatever the visitor's own timezone
+  function indiaNow() {
+    var parts = new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Asia/Kolkata", weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false
+    }).formatToParts(new Date());
+    var get = function (t) { return parts.find(function (p) { return p.type === t; }).value; };
+    var days = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    return { day: days[get("weekday")], mins: parseInt(get("hour"), 10) * 60 + parseInt(get("minute"), 10) };
+  }
+
+  function updateStatus() {
+    var now = indiaNow();
+    var box = document.getElementById("status");
+    var text = document.getElementById("status-text");
+    var row = document.querySelector('#hours tr[data-day="' + now.day + '"]');
+    if (row) row.classList.add("today");
+
+    if (now.day !== 0) {
+      for (var i = 0; i < SESSIONS.length; i++) {
+        if (now.mins >= SESSIONS[i][0] && now.mins < SESSIONS[i][1]) {
+          box.classList.add("open");
+          text.textContent = "Open now, until " + fmt(SESSIONS[i][1]);
+          return;
+        }
+      }
+      for (var j = 0; j < SESSIONS.length; j++) {
+        if (now.mins < SESSIONS[j][0]) {
+          text.textContent = "Closed now, opens at " + fmt(SESSIONS[j][0]);
+          return;
+        }
+      }
+    }
+    text.textContent = now.day === 6 ? "Closed now, opens Monday at 10 am" : "Closed now, opens tomorrow at 10 am";
+  }
+  updateStatus();
+
+  var form = document.getElementById("booking");
+  var error = document.getElementById("error");
+
+  // No past dates, and no Sundays
+  var today = new Date();
+  today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+  form.date.min = today.toISOString().slice(0, 10);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = form.name.value.trim();
+    var phone = form.phone.value.replace(/[^\d+]/g, "");
+
+    if (!name) { error.textContent = "Enter your name so we know who to confirm with."; form.name.focus(); return; }
+    if (phone.replace(/\D/g, "").length < 10) { error.textContent = "Enter a 10-digit phone number we can reach you on."; form.phone.focus(); return; }
+    if (form.date.value && new Date(form.date.value + "T00:00:00").getDay() === 0) {
+      error.textContent = "The clinic is closed on Sundays. Pick another date.";
+      form.date.focus();
+      return;
+    }
+    error.textContent = "";
+
+    var lines = [
+      "Hi, I'd like to book an appointment.",
+      "Name: " + name,
+      "Phone: " + phone,
+      "Reason: " + form.reason.value
+    ];
+    if (form.date.value) lines.push("Preferred date: " + form.date.value);
+    lines.push("Preferred time: " + form.time.value);
+
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>
